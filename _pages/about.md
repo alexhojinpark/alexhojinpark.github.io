@@ -13,7 +13,7 @@ redirect_from:
 <section class="hero">
   <p class="hero__eyebrow">Audio Developer · Vancouver, Canada</p>
   <h1 class="hero__title">Alex Hojin Park</h1>
-  <p class="hero__lead">I write <strong>real-time DSP in C/C++</strong>, and I mix live sound on weekends, so my code has to work in a real room, not just on paper.</p>
+  <p class="hero__lead">I’m an audio developer and a live sound engineer.<br>One job writes the algorithms, the other tells me if they actually work.</p>
   <p class="hero__actions">
     <a class="btn-solid" href="{{ base_path }}/portfolio/">View projects</a>
     <a class="btn-pill" href="{{ base_path }}/cv/">Resume</a>
