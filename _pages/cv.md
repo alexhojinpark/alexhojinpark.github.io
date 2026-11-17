@@ -9,10 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-<!-- TODO: put your resume PDF at files/Alex_Park_Resume.pdf, then uncomment the next line -->
-<!-- **[⬇ Download PDF]({{ base_path }}/files/Alex_Park_Resume.pdf)** -->
-
-*PDF download coming soon.*
+<p class="hero__actions"><a class="btn-solid" href="{{ base_path }}/files/Alex_Park_CV_2026.pdf" download>Download PDF ↓</a> <a class="btn-pill" href="{{ base_path }}/files/Alex_Park_CV_2026.pdf" target="_blank" rel="noopener">Open in browser ↗</a></p>
 
 **Alex Hojin Park** · Audio Developer · Vancouver, Canada  
 [alexhojinpark@gmail.com](mailto:alexhojinpark@gmail.com) · [github.com/alexhojinpark](https://github.com/alexhojinpark)
