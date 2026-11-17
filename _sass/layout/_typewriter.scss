@@ -1,0 +1,97 @@
+/* ==========================================================================
+   TYPEWRITER LOOK
+   Modelled on the Obsidian "Typewriter" theme by crashmoney
+   (github.com/crashmoney/obsidian-typewriter): iA Writer fonts, a warm
+   cream page in light mode, sepia text on charcoal in dark mode, green accent.
+   Loaded after layout/site, so removing the import restores the old look.
+   ========================================================================== */
+
+/* iA Writer Quattro S / Mono S, SIL Open Font License (assets/fonts/ia-writer/LICENSE.md) */
+@font-face { font-family: "iA Writer Quattro S"; src: url("../fonts/ia-writer/iAWriterQuattroS-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "iA Writer Quattro S"; src: url("../fonts/ia-writer/iAWriterQuattroS-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "iA Writer Quattro S"; src: url("../fonts/ia-writer/iAWriterQuattroS-Bold.woff2") format("woff2"); font-weight: 600 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "iA Writer Quattro S"; src: url("../fonts/ia-writer/iAWriterQuattroS-BoldItalic.woff2") format("woff2"); font-weight: 600 900; font-style: italic; font-display: swap; }
+@font-face { font-family: "iA Writer Mono S"; src: url("../fonts/ia-writer/iAWriterMonoS-Regular.woff2") format("woff2"); font-weight: 400 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "iA Writer Mono S"; src: url("../fonts/ia-writer/iAWriterMonoS-Bold.woff2") format("woff2"); font-weight: 600 900; font-style: normal; font-display: swap; }
+
+$tw-text: "iA Writer Quattro S", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$tw-mono: "iA Writer Mono S", "JetBrains Mono", Menlo, Consolas, monospace;
+
+/* ---------- Light: cream paper, near-black ink, green accent ---------- */
+:root {
+  --ap-bg: #fcf5e4;
+  --ap-surface: #fffaee;
+  --ap-surface-2: #eee8d5;
+  --ap-text: #262626;
+  --ap-muted: #595959;
+  --ap-faint: #8a8578;
+  --ap-border: #e4dcc8;
+  --ap-accent: #3f8a4a;
+  --ap-accent-hover: #2f6b38;
+  --ap-accent-soft: rgba(81, 157, 92, 0.12);
+  --ap-shadow: 0 1px 2px rgba(60, 50, 20, 0.05), 0 8px 24px rgba(60, 50, 20, 0.06);
+}
+
+/* ---------- Dark: charcoal page, sepia text ---------- */
+html[data-theme="dark"] {
+  --ap-bg: #262626;
+  --ap-surface: #2c2b29;
+  --ap-surface-2: #36322d;
+  --ap-text: #c5b8a1;
+  --ap-muted: #999189;
+  --ap-faint: #7d776f;
+  --ap-border: #3a3836;
+  --ap-accent: #6bb376;
+  --ap-accent-hover: #8cc995;
+  --ap-accent-soft: rgba(107, 179, 118, 0.14);
+  --ap-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Type ---------- */
+html, body,
+.masthead, .greedy-nav, .page__content, .archive,
+input, button, select, textarea,
+.btn-solid, .btn-pill, .filter__chip,
+table, th, td, figcaption, .audio-ab figcaption, .doc-figure figcaption,
+.page__footer, .back-link, .more-link { font-family: $tw-text; }
+
+h1, h2, h3, h4, h5, h6,
+.page__title, .hero__title, .pcard__title { font-family: $tw-text; letter-spacing: -0.01em; }
+
+/* iA Writer Quattro has regular and bold only, and reads best without tight tracking */
+.hero__title { font-weight: 700; letter-spacing: -0.02em; }
+.page__title { font-weight: 700; letter-spacing: -0.015em; }
+
+code, pre, kbd, samp,
+.hero__eyebrow, .section-label, .chips li, .pcard__meta, .project-head__meta,
+.archive__subtitle, .xp__dates, .skills__row .chips li { font-family: $tw-mono; }
+
+.page__content { line-height: 1.75; }
+
+/* iA Writer Quattro runs wide, so set the base size a little smaller than the old Inter setup (17px) */
+html { font-size: 15.5px; }
+.hero__lead { font-size: 1.1rem; }
+.now p { font-size: 0.86rem; }
+
+/* ---------- One centred reading column ----------
+   Header, page content and footer share one narrow width, so every page
+   sits in the middle of the screen instead of hugging the left edge. */
+$tw-max: 820px;
+#main,
+.masthead__inner-wrap,
+.page__footer footer { max-width: $tw-max; }
+
+/* text blocks fill the column instead of stopping short of its right edge */
+.page__content {
+  > p, > ul, > ol, > h2, > h3, > h4, > blockquote, > table, > .video-embed,
+  > .project-head, > .audio-ab, > .doc-figure, > .figure-pair { max-width: none; }
+}
+.hero, .home-section > p, .page-intro, .xp { max-width: none; }
+
+/* three cards across is too tight at this width */
+.pgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 600px) { .pgrid { grid-template-columns: minmax(0, 1fr); } }
+
+/* darker green for the solid button in dark mode, so it sits back a little */
+html[data-theme="dark"] .btn-solid { background: #3d7a46; border-color: #3d7a46; color: #f2ede3; }
+html[data-theme="dark"] .btn-solid:hover { background: #4a8f54; border-color: #4a8f54; color: #fff; }

@@ -2,17 +2,17 @@
 
 <!-- start custom head snippets -->
 
-<!-- Apply the saved theme (light by default) before the page paints, so dark mode never flashes white.
+<!-- Apply the saved theme (dark by default) before the page paints, so dark mode never flashes white.
      Same rules as determineComputedTheme() in assets/js/_main.js. -->
 <script>
   (function () {
     var t = null;
     try { t = localStorage.getItem("theme"); } catch (e) {}
-    if (t !== "dark") t = "light"; // light is the default; dark only when chosen
+    if (t !== "light") t = "dark"; // dark is the default; light only when chosen
     var root = document.documentElement;
     if (t === "dark") root.setAttribute("data-theme", "dark");
     root.style.colorScheme = t;
-    root.style.backgroundColor = t === "dark" ? "#0e0f12" : "#fbfaf8";
+    root.style.backgroundColor = t === "dark" ? "#262626" : "#fcf5e4";
   })();
 </script>
 
@@ -27,7 +27,7 @@
  <link rel="preload" href="{{ base_path }}/assets/css/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ base_path }}/assets/css/fontawesome.css"></noscript>
 
-<!-- favicon: orange waveform, images/favicon.svg -->
+<!-- favicon: green waveform, images/favicon.svg -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
 <link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32"/>

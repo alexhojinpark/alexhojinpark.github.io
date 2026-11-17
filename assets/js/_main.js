@@ -15,8 +15,8 @@ function determineComputedTheme() {
   let themeSetting = localStorage.getItem("theme");
   themeSetting = (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
 
-  // Light is the default; dark only when the visitor picked it with the toggle
-  return themeSetting === "dark" ? "dark" : "light";
+  // Dark is the default; light only when the visitor picked it with the toggle
+  return themeSetting === "light" ? "light" : "dark";
 }
 
 // Set the theme on page load or when explicitly called. Without an argument the
@@ -25,7 +25,7 @@ function setTheme(theme) {
   const use_theme = theme || determineComputedTheme();
 
   document.documentElement.style.colorScheme = use_theme;
-  document.documentElement.style.backgroundColor = use_theme === "dark" ? "#0e0f12" : "#fbfaf8";
+  document.documentElement.style.backgroundColor = use_theme === "dark" ? "#262626" : "#fcf5e4";
   if (use_theme === "dark") {
     $("html").attr("data-theme", "dark");
     $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
@@ -147,7 +147,7 @@ $(document).ready(function () {
   const scssLarge = 925;          // pixels, from /_sass/_themes.scss
   const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
 
-  // Light by default; dark only if the visitor chose it
+  // Dark by default; light only if the visitor chose it
   setTheme();
 
   // Enable the theme toggle
