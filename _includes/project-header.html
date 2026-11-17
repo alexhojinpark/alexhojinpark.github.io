@@ -1,0 +1,19 @@
+{% include base_path %}
+<div class="project-head">
+  <p class="project-head__meta">
+    <span>{{ page.year }}</span>
+    {% for c in page.categories %}
+      · <a href="{{ base_path }}/portfolio/?category={{ c | slugify }}">{{ c }}</a>
+    {% endfor %}
+  </p>
+  {% if page.tech %}
+    <ul class="chips">{% for t in page.tech %}<li>{{ t }}</li>{% endfor %}</ul>
+  {% endif %}
+  {% if page.links and page.links.size > 0 %}
+    <p class="project-head__links">
+      {% for l in page.links %}
+        <a class="btn-pill" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} <span aria-hidden="true">↗</span></a>
+      {% endfor %}
+    </p>
+  {% endif %}
+</div>

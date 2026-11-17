@@ -1,0 +1,6 @@
+# Filter chips on the Projects page, in this order. Must match the `categories` used in _portfolio/*.md
+- DSP & Plugins
+- Game Audio
+- Open Source
+- Interactive
+- Game Dev

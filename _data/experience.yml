@@ -1,0 +1,84 @@
+# Experience page content. Edit here; _pages/experience.md renders it.
+# `points` support Markdown (links, *italics*).
+
+groups:
+  - title: "Audio Software"
+    entries:
+      - role: "Audio Software Developer"
+        org: "VideoLAN / Google Summer of Code"
+        url: "https://summerofcode.withgoogle.com/programs/2026/projects/01ooIHOz"
+        dates: "2026"
+        project: "/portfolio/vlc-audio-filters/"
+        points:
+          - "Built a real-time C audio filter module for VLC: an SRS WoW-style 3D stereo widener (M/S decomposition, shelving biquads, psychoacoustic bass enhancement). In review as [MR !9573](https://code.videolan.org/videolan/vlc/-/merge_requests/9573); see the [final documentation](https://code.videolan.org/ahp1/gsoc-2026-final-documentation)."
+      - role: "Open-Source Contributor"
+        org: "GNU Radio / openFrameworks"
+        url: "https://openframeworks.cc/"
+        dates: "2023 – 2025"
+        project: "/portfolio/gnu-radio/"
+        points:
+          - "Ported GNU Radio 3.10's bitwise logic blocks to GNU Radio 4 as templated C++ blocks with Boost.UT unit tests ([PR #536](https://github.com/fair-acc/gnuradio4/pull/536))."
+          - "Updated the Korean translation of the official [openFrameworks Xcode setup guide](https://openframeworks.cc/ko/setup/xcode/) (2 PRs merged)."
+
+  - title: "Game Industry"
+    entries:
+      - role: "Audio Quality Assurance Technician"
+        org: "Testronic"
+        url: "https://www.testroniclabs.com/"
+        dates: "2024 – 2025"
+        points:
+          - "Audio QA for AAA and indie titles, including bug tracking and cross-team collaboration."
+          - "Titles: *Kingdom Come: Deliverance*, *V Rising*, *For The King 2*, *Nobody Wants to Die*"
+      - role: "Game Operations Manager"
+        org: "Vertigo Games"
+        url: "https://www.vertigogames.com/"
+        dates: "2023"
+        points:
+          - "Live operations and QA for 500+ concurrent players. Coordinated with developers and SRE teams, and planned community events."
+          - "Titles: *Tree of Savior*, *Special Force 2*, *Papaya Play*"
+
+  - title: "Audio-Visual & Live Sound"
+    entries:
+      - role: "Audio Visual Engineer"
+        org: "AVI-SPL"
+        url: "https://avispl.com/"
+        dates: "2025 – 2026"
+        points:
+          - "Installed, tested and commissioned professional AV systems from schematics and architectural drawings."
+          - "Worked on the [New St. Paul's Hospital](https://www.thenewstpauls.ca/en), Canada's largest hospital project. Did on-site client consultation and sound-system tuning."
+      - role: "Live Sound Engineer"
+        org: "Volunteer & self-employed"
+        dates: "2022 – present"
+        points:
+          - "Live sound mixing and recording for in-person and online community events, including weekly worship services."
+          - "Venue acoustic assessment, plus AV system setup and operation."
+          - "Recent work: [KOSTA Vancouver](https://www.instagram.com/kosta_vancouver/) · [One Heart Worship](https://www.instagram.com/oneheartworship_/) · [Vancouver Hebron Church livestreams](https://www.youtube.com/@%EB%B0%B4%EC%BF%A0%EB%B2%84%ED%97%A4%EB%B8%8C%EB%A1%A0%EA%B5%90%ED%9A%8C)"
+
+  - title: "Education"
+    entries:
+      - role: "MSc in Sound and Music Computing, First Class Honours"
+        org: "Maynooth University, Ireland"
+        url: "https://www.maynoothuniversity.ie/study-maynooth/postgraduate-studies/courses/msc-sound-and-music-computing"
+        dates: "2024 – 2025"
+        project: "/portfolio/csoundwwise/"
+        points:
+          - "Coursework: software sound synthesis, music systems programming, signal processing, interactive systems, acoustics, psychoacoustics."
+          - "Thesis: *Integrating Csound with Audiokinetic Wwise: A Framework for Real-Time Synthesis in Game Audio Middleware.*"
+      - role: "Diploma in Computer Systems Technology"
+        org: "BCIT"
+        url: "https://www.bcit.ca/programs/computer-systems-technology-diploma-full-time-5500dipma/"
+        dates: "2019 – 2021"
+        points:
+          - "Programming paradigms, systems programming, computer architecture, software development."
+
+skills:
+  - label: "Languages"
+    items: ["C", "C++", "C#", "Python", "Csound", "Pure Data"]
+  - label: "Audio frameworks"
+    items: ["JUCE", "Wwise SDK", "Unreal MetaSound", "VLC module API", "GNU Radio", "SDL"]
+  - label: "Engines & tools"
+    items: ["Unreal Engine 5", "Unity", "Git", "CI"]
+  - label: "Audio"
+    items: ["DSP", "Filter design", "Spatial audio & stereo imaging", "Synthesis", "Live mixing", "Room tuning"]
+  - label: "Spoken"
+    items: ["English (native)", "Korean (native)"]

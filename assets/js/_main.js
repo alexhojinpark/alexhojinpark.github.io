@@ -9,20 +9,14 @@
 const PLOTLY_URL = "https://cdn.jsdelivr.net/npm/plotly.js@3.6.0/dist/plotly.min.js";
 const MERMAID_URL = "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
 
-// Detect OS/browser preference
-const browserPref = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
 // Determine the computed theme, which can be "dark" or "light".
 function determineComputedTheme() {
   // Determine the expected state of the theme toggle, which can be "dark", "light", or default "system"
   let themeSetting = localStorage.getItem("theme");
   themeSetting = (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
 
-  // Return the setting if set, or use the browser preference
-  if (themeSetting != "system") {
-    return themeSetting;
-  }
-  return browserPref ? "dark" : "light";
+  // Light is the default; dark only when the visitor picked it with the toggle
+  return themeSetting === "dark" ? "dark" : "light";
 }
 
 // Set the theme on page load or when explicitly called. Without an argument the
@@ -30,6 +24,8 @@ function determineComputedTheme() {
 function setTheme(theme) {
   const use_theme = theme || determineComputedTheme();
 
+  document.documentElement.style.colorScheme = use_theme;
+  document.documentElement.style.backgroundColor = use_theme === "dark" ? "#0e0f12" : "#fbfaf8";
   if (use_theme === "dark") {
     $("html").attr("data-theme", "dark");
     $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
@@ -151,33 +147,13 @@ $(document).ready(function () {
   const scssLarge = 925;          // pixels, from /_sass/_themes.scss
   const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
 
-  // If the user hasn't chosen a theme, follow the OS preference
+  // Light by default; dark only if the visitor chose it
   setTheme();
-  window.matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener("change", (e) => {
-          if (!localStorage.getItem("theme")) {
-            setTheme(e.matches ? "dark" : "light");
-          }
-        });
 
   // Enable the theme toggle
   $('#theme-toggle').on('click', toggleTheme);
 
-  // Enable the sticky footer
-  var bumpIt = function () {
-    $("body").css("padding-bottom", "0");
-    $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
-  }
-  $(window).resize(function () {
-    didResize = true;
-  });
-  setInterval(function () {
-    if (didResize) {
-      didResize = false;
-      bumpIt();
-    }}, 250);
-  var didResize = false;
-  bumpIt();
+  // Footer is in normal document flow; no sticky-footer spacing needed.
 
   // Follow menu drop down
   $(".author__urls-wrapper button").on("click", function () {

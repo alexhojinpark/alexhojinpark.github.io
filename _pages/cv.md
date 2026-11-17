@@ -1,64 +1,43 @@
 ---
-layout: archive
-title: "CV"
+layout: single
+title: "Resume"
 permalink: /cv/
-author_profile: true
+author_profile: false
 redirect_from:
   - /resume
 ---
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+<!-- TODO: put your resume PDF at files/Alex_Park_Resume.pdf, then uncomment the next line -->
+<!-- **[⬇ Download PDF]({{ base_path }}/files/Alex_Park_Resume.pdf)** -->
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+*PDF download coming soon.*
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+**Alex Hojin Park** · Audio Developer · Vancouver, Canada  
+[alexhojinpark@gmail.com](mailto:alexhojinpark@gmail.com) · [github.com/alexhojinpark](https://github.com/alexhojinpark)
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+### Summary
+Audio software developer with an MSc in Sound and Music Computing, building real-time DSP in C/C++ across media players, plugins, and game engines (VLC, JUCE, Wwise, Unreal MetaSound).
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+Years of professional audio QA, AV commissioning, and live mixing taught me to design for how audio is actually heard and where it breaks, not just how it measures.
+
+### Experience
+- **Audio Software Developer**, Google Summer of Code Contributor, VideoLAN (VLC) · 2026
+- **Audio Visual Engineer**, AVI-SPL · 2025 – 2026
+- **Audio Quality Assurance Technician**, Testronic · 2024 – 2025
+- **Open-Source Contributor**, GNU Radio / openFrameworks · 2023 – 2025
+- **Game Operations Manager**, Vertigo Games · 2023
+- **Live Sound Engineer**, volunteer & self-employed · 2022 – present
+
+[Full details →]({{ base_path }}/experience/)
+
+### Education
+- **MSc Sound and Music Computing, First Class Honours**, Maynooth University · 2024 – 2025
+- **Diploma, Computer Systems Technology**, BCIT · 2019 – 2021
+
+### Selected projects
+- [VLC 3D Stereo Widener (GSoC 2026)]({{ base_path }}/portfolio/vlc-audio-filters/)
+- [csoundwwise: Csound inside Wwise]({{ base_path }}/portfolio/csoundwwise/)
+- [MetaSound DSP Nodes for UE5]({{ base_path }}/portfolio/metasound-nodes/)
+- [JX11 Polyphonic Synthesizer]({{ base_path }}/portfolio/jx11-synth/)

@@ -1,14 +1,82 @@
 ---
 layout: archive
-title: "Portfolio"
+title: "Projects"
 permalink: /portfolio/
-author_profile: true
 ---
 
 {% include base_path %}
 
+<p class="page-intro">Audio software, game audio and interactive work, newest first. Filter by category:</p>
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+<div class="filter" role="group" aria-label="Filter projects by category">
+  <button type="button" class="filter__chip is-active" data-filter="all" aria-pressed="true">All</button>
+  {% for c in site.data.project_categories %}
+    <button type="button" class="filter__chip" data-filter="{{ c | slugify }}" aria-pressed="false">{{ c }}</button>
+  {% endfor %}
+</div>
 
+<section class="psection" data-section>
+  <h2 class="section-label">Featured</h2>
+  <div class="pgrid pgrid--2">
+    {% assign featured = site.portfolio | where: "tier", "featured" | sort: "order" %}
+    {% for p in featured %}{% include project-card.html project=p %}{% endfor %}
+  </div>
+</section>
+
+<section class="psection" data-section>
+  <h2 class="section-label">More projects</h2>
+  <div class="pgrid">
+    {% assign more = site.portfolio | where: "tier", "more" | sort: "order" %}
+    {% for p in more %}{% include project-card.html project=p %}{% endfor %}
+  </div>
+</section>
+
+<section class="psection" data-section>
+  <h2 class="section-label">Archive · Game Dev 2019–2021</h2>
+  <div class="plist">
+    {% assign archive = site.portfolio | where: "tier", "archive" | sort: "order" %}
+    {% for p in archive %}{% include project-card.html project=p compact=true %}{% endfor %}
+  </div>
+</section>
+
+<p class="filter__empty" hidden>No projects in this category yet.</p>
+
+<script>
+(function () {
+  var chips = document.querySelectorAll('.filter__chip');
+  var cards = document.querySelectorAll('.pcard');
+  var sections = document.querySelectorAll('[data-section]');
+  var empty = document.querySelector('.filter__empty');
+
+  function apply(slug, push) {
+    var valid = Array.prototype.some.call(chips, function (c) { return c.dataset.filter === slug; });
+    if (!valid) slug = 'all';
+    chips.forEach(function (c) {
+      var on = c.dataset.filter === slug;
+      c.classList.toggle('is-active', on);
+      c.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    cards.forEach(function (card) {
+      var cats = (card.dataset.cats || '').split(' ');
+      card.hidden = !(slug === 'all' || cats.indexOf(slug) !== -1);
+    });
+    var anyVisible = false;
+    sections.forEach(function (s) {
+      var visible = s.querySelectorAll('.pcard:not([hidden])').length > 0;
+      s.hidden = !visible;
+      anyVisible = anyVisible || visible;
+    });
+    empty.hidden = anyVisible;
+    if (push) {
+      var url = slug === 'all' ? location.pathname : location.pathname + '?category=' + slug;
+      history.replaceState(null, '', url);
+    }
+  }
+
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () { apply(c.dataset.filter, true); });
+  });
+  var initial = new URLSearchParams(location.search).get('category') || 'all';
+  apply(initial, false);
+})();
+</script>
