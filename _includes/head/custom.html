@@ -2,13 +2,13 @@
 
 <!-- start custom head snippets -->
 
-<!-- Apply the saved theme (dark by default) before the page paints, so dark mode never flashes white.
+<!-- Apply the saved theme (light by default) before the page paints, so dark mode never flashes white.
      Same rules as determineComputedTheme() in assets/js/_main.js. -->
 <script>
   (function () {
     var t = null;
     try { t = localStorage.getItem("theme"); } catch (e) {}
-    if (t !== "light") t = "dark"; // dark is the default; light only when chosen
+    if (t !== "dark") t = "light"; // light is the default; dark only when chosen
     var root = document.documentElement;
     if (t === "dark") root.setAttribute("data-theme", "dark");
     root.style.colorScheme = t;
@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
 <link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
 <link rel="icon" href="{{ base_path }}/images/favicon.ico"/>
-<meta name="theme-color" content="#262626"/>
+<meta name="theme-color" content="#fcf5e4"/>
 
 <!-- Fonts: iA Writer Quattro S / Mono S, self-hosted (see _sass/layout/_typewriter.scss) -->
 <link rel="preload" href="{{ base_path }}/assets/fonts/ia-writer/iAWriterQuattroS-Regular.woff2" as="font" type="font/woff2" crossorigin>
