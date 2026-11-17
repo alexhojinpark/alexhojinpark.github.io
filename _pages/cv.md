@@ -22,10 +22,10 @@ Years of professional audio QA, AV commissioning, and live mixing taught me to d
 ### Experience
 - **Audio Software Developer**, Google Summer of Code Contributor, VideoLAN (VLC) · 2026
 - **Audio Visual Engineer**, AVI-SPL · 2025 – 2026
-- **Audio Quality Assurance Technician**, Testronic · 2024 – 2025
+- **Audio Quality Assurance Engineer**, Testronic · 2024 – 2025
 - **Open-Source Contributor**, GNU Radio / openFrameworks · 2023 – 2025
 - **Game Operations Manager**, Vertigo Games · 2023
-- **Live Sound Engineer**, volunteer & self-employed · 2022 – present
+- **Live Sound Engineer**, freelancer · 2022 – present
 
 [Full details →]({{ base_path }}/experience/)
 
