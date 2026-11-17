@@ -10,6 +10,7 @@ year: "2021"
 links: []
 header:
   teaser: "https://img.youtube.com/vi/Sup-Bgp630g/hqdefault.jpg"
+  card: "/files/cards/dungeon-dash.jpg"
 ---
 <!-- Hidden link: https://github.com/alexhojinpark/Game-Project2 is a PRIVATE repo (404 for visitors). Make it public, then restore it under links: -->
 *Destroy the maze, kill the monsters, and survive the infinite dungeons.*

@@ -12,6 +12,7 @@ links:
     url: "https://github.com/alexhojinpark/csoundwwise"
 header:
   teaser: "https://img.youtube.com/vi/1qfJQkmE1xI/hqdefault.jpg"
+  card: "/files/cards/csoundwwise.jpg"
 ---
 {% include base_path %}
 

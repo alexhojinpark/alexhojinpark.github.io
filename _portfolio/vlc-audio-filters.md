@@ -9,6 +9,7 @@ tech: ["C", "VLC module API", "DSP", "M/S processing", "Biquads"]
 year: "2026"
 header:
   teaser: "/files/vlc-srs-wow/ui_preferences.png"
+  card: "/files/cards/vlc-audio-filters.jpg"
 links:
   - label: "Final documentation"
     url: "https://code.videolan.org/ahp1/gsoc-2026-final-documentation"

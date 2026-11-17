@@ -9,6 +9,7 @@ tech: ["Python", "OpenCV", "MediaPipe", "OSC", "Pure Data", "Reaper"]
 year: "2024–2025"
 header:
   teaser: "/files/interactive/face_tracking_osc_reaper.png"
+  card: "/files/cards/interactive-facial-control.jpg"
 links:
   - label: "GitHub"
     url: "https://github.com/alexhojinpark/interactive-system"

@@ -12,6 +12,7 @@ links:
     url: "https://github.com/alexhojinpark/Team-31-COMP-2930-EcoCity"
 header:
   teaser: "https://img.youtube.com/vi/l-VefsIu0jQ/hqdefault.jpg"
+  card: "/files/cards/ecocity.jpg"
 ---
 <!-- Removed link: https://ecocitythegame.ca/ (domain no longer exists, checked 2026-11-16) -->
 A PC and mobile city-builder about sustainability, sponsored by the Ecocity World Summit.

@@ -12,6 +12,7 @@ links:
     url: "https://github.com/alexhojinpark/SimpleEQ"
 header:
   teaser: "https://img.youtube.com/vi/v6OappMWmYE/hqdefault.jpg"
+  card: "/files/cards/simpleeq.jpg"
 ---
 ## Highlights
 

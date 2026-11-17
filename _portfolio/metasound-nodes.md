@@ -9,6 +9,7 @@ tech: ["C++", "Unreal Engine 5", "MetaSound"]
 year: "2025"
 header:
   teaser: "/files/metasound/custom_nodes.png"
+  card: "/files/cards/metasound-nodes.jpg"
 links:
   - label: "GitHub"
     url: "https://github.com/alexhojinpark/ap_metasound"

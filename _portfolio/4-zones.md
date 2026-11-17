@@ -12,6 +12,7 @@ links:
     url: "https://github.com/alexhojinpark/4-Zones-Wwise"
 header:
   teaser: "https://img.youtube.com/vi/bln7vP6pFVs/hqdefault.jpg"
+  card: "/files/cards/4-zones.jpg"
 ---
 Explore four zones, each with its own ambient atmosphere.
 

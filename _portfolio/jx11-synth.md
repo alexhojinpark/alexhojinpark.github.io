@@ -9,6 +9,7 @@ tech: ["C++", "JUCE", "MIDI", "VST3 / AU"]
 year: "2024"
 header:
   teaser: "/files/jx11/synth_schematic.jpg"
+  card: "/files/cards/jx11-synth.jpg"
 links:
   - label: "GitHub"
     url: "https://github.com/alexhojinpark/JX11"

@@ -12,6 +12,7 @@ links:
     url: "https://github.com/alexhojinpark/Color-Picker"
 header:
   teaser: "https://img.youtube.com/vi/yqRoHnk93pw/hqdefault.jpg"
+  card: "/files/cards/color-picker.jpg"
 ---
 Find the block whose color is different. Over time, the answer block's color gets closer to the others.
 

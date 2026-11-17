@@ -12,6 +12,7 @@ links:
     url: "https://github.com/alexhojinpark/Double-Pendulum-Audio-Visualizer"
 header:
   teaser: "https://img.youtube.com/vi/v0P49iGL860/hqdefault.jpg"
+  card: "/files/cards/double-pendulum.jpg"
 ---
 ## Highlights
 
