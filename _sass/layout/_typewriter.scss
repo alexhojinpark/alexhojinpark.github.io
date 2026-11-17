@@ -95,3 +95,14 @@ $tw-max: 820px;
 /* darker green for the solid button in dark mode, so it sits back a little */
 html[data-theme="dark"] .btn-solid { background: #3d7a46; border-color: #3d7a46; color: #f2ede3; }
 html[data-theme="dark"] .btn-solid:hover { background: #4a8f54; border-color: #4a8f54; color: #fff; }
+
+/* ---------- No flicker between pages ----------
+   The template fades the menu, header and footer in on every page load, so
+   switching pages made the top bar blink. Show everything straight away. */
+.masthead, .masthead__inner-wrap, .greedy-nav, .page__footer, .page__hero, #main {
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+/* The theme icon is a sun in the HTML and switched to a moon by JavaScript after
+   load; pick the right icon in CSS so it never swaps visibly. */
+html[data-theme="dark"] #theme-icon::before { content: "\f186"; }
