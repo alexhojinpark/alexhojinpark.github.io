@@ -22,7 +22,7 @@ redirect_from:
   </p>
   <div class="now">
     <span class="now__dot" aria-hidden="true"></span>
-    <p><strong>Open to work:</strong> I recently completed Google Summer of Code as an audio software developer at <a href="{{ base_path }}/portfolio/vlc-audio-filters/">VideoLAN (VLC)</a>, and I'm now looking for audio software &amp; DSP roles.<br>Based in Vancouver, open to work anywhere on earth. <a class="nowrap" href="mailto:alexhojinpark@gmail.com">Get in touch →</a></p>
+    <p><strong>Open to work:</strong> I recently completed Google Summer of Code as an audio software developer at <a href="{{ base_path }}/portfolio/vlc-audio-filters/">VideoLAN (VLC)</a>, and I'm now looking for audio software &amp; DSP roles.</p>
   </div>
 </section>
 
